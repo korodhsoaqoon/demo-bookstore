@@ -34,7 +34,7 @@ export const createBook = async (req, res) => {
     !bookInfo.price ||
     !bookInfo.description ||
     !bookInfo.category ||
-    !bookInfo.Langauge
+    !bookInfo.language
   ) {
     return res.status(400).json({ message: "All fields are required" });
   }

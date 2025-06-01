@@ -6,7 +6,7 @@ import AddBookPage from "./pages/AddBookPage";
 
 const App = () => {
   return (
-    <div className="font-mono">
+    <div className="font-mono bg-blue-100 min-h-screen">
       <NavBar />
       <Routes>
         <Route path="/" element={<Homepage />} />
