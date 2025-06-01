@@ -3,6 +3,9 @@ import NavBar from "./components/NavBar";
 import { Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import AddBookPage from "./pages/AddBookPage";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import BookDetails from "./pages/BookDetails";
 
 const App = () => {
   return (
@@ -11,7 +14,20 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/add-book" element={<AddBookPage />} />
+        <Route path="/:id" element={<BookDetails />} />
       </Routes>
+      <ToastContainer
+        position="top-right"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 };
